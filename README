@@ -1,0 +1,26 @@
+// Author: Rishi Sadhir
+// Contact: rishi.sadhir@gmail.com
+// Date: 10/29/2012
+// Purpose: CS1550 - Project 1
+
+Intro:
+
+  A distributed sorter meant to sort large text files using various search algorithms at once, reporting their performance at the end.
+
+Files:
+	Makefile
+	readme.txt
+	splitmerge.c
+	root.c
+	shellsort.c
+	bubblesort.c
+	quicksort.c
+
+Run With:
+    ./sorter -d <depth> -f <file> -a <column 1 to 4>
+  Note - In order to run the clean-up shell script, may have to
+         enter :-  chmod -x *.sh
+
+Problems:
+  None known.
+
