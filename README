@@ -1,7 +1,6 @@
 // Author: Rishi Sadhir
 // Contact: rishi.sadhir@gmail.com
 // Date: 10/29/2012
-// Purpose: CS1550 - Project 1
 
 Intro:
 
@@ -16,10 +15,16 @@ Files:
 	bubblesort.c
 	quicksort.c
 
+Setup:
+  make
+
 Run With:
-    ./sorter -d <depth> -f <file> -a <column 1 to 4>
-  Note - In order to run the clean-up shell script, may have to
-         enter :-  chmod -x *.sh
+    ./sorter -d <depth> -f <file> -a <column number to sort on>
+  Note - In order to run the clean-up shell script, may have to enter :-  chmod -x *.sh
+
+Description:
+The program starts in root.c, which forks off a splitterMerger. Each splitter merger forks off two more splitter moergers until we are at the propper depth, at which point the splitter mergers at the bottom of the tree split off two sorting algorithms. These sorters independently operate on their select portion of the file, then report the sort back to the parent splitterMerger via a pipe, where they are merged (using part of mergesort). The top most splitterMerger will finally merge the last two halves of the file, reporting the result back to root.
+The -d parameter tells us the depth of the distribution. For depth d, 2^d sorting algorithms will independently sort their portion of the file.
 
 Problems:
   None known.
